@@ -2,6 +2,13 @@
   "name": "hustle-up",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --out-dir prod"
+  },
   "author": "lawrence4code",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3"
+  }
 }
