@@ -1,0 +1,82 @@
+.about {
+  background-color: $grey-light1;
+  margin-top: -10.5vh;
+  padding-bottom: 12rem;
+  padding-top: 7.5rem;
+  text-align: center;
+
+  &__title {
+    background-clip: text;
+    color: transparent;
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+
+    h3 {
+      border-bottom: 1px solid $turqouise;
+      display: inline-block;
+    }
+
+    & p {
+      margin-top: 0.25rem;
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.composition {
+  position: relative;
+
+  &__photo {
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 3rem rgba(#000, 0.4);
+    height: 220px;
+    outline-offset: 0.5rem;
+    position: absolute;
+    transition: all 0.3s;
+    width: 285px;
+    z-index: 10;
+    &--photoOne {
+      top: 0;
+      left: 0;
+    }
+
+    &--photoTwo {
+      left: 14.5rem;
+      top: 2rem;
+    }
+
+    &--photoThree {
+      left: 4.5rem;
+      top: 12.7rem;
+    }
+
+    &:hover {
+      box-shadow: 0 2rem 3rem rgba($black, 0.6);
+      outline: 0.3rem solid $turqouise;
+      transform: scale(1.1) translateY(-0.5rem);
+      z-index: 20;
+    }
+  }
+
+  &:hover &__photo:not(:hover) {
+    transform: scale(0.97);
+  }
+}
