@@ -31,6 +31,10 @@
     color: $white;
   }
 
+  &-turqouise::after {
+    background-color: $turqouise;
+  }
+
   &-white::after {
     background-color: $white;
   }
