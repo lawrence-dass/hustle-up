@@ -1,0 +1,232 @@
+.plans {
+  background-color: $grey-light1;
+  padding: 7rem 0 10rem 0;
+  margin-top: -3rem;
+  position: relative;
+}
+
+.plans__block {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  perspective: 100rem;
+  padding: 0 4rem;
+}
+
+.plans {
+  &__title {
+    text-align: center;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
+  }
+
+  &__card {
+    position: relative;
+    height: 25rem;
+    &:hover .card--front {
+      background-color: blue;
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .card--back {
+      transform: rotateY(0deg);
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.card {
+  color: black;
+  height: 28rem;
+  transition: all 1s;
+  perspective: 150rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 2px;
+  box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+
+  &--front {
+    background-color: white;
+  }
+
+  &__picture {
+    background-size: cover;
+    height: 14rem;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  &__picture--1 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($gold1, 0.65),
+        rgba($gold2, 0.85)
+      ),
+      url(../img/hero3bw.jpg);
+  }
+
+  &__picture--2 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($royal1, 0.65),
+        rgba($royal2, 0.85)
+      ),
+      url(../img/hero4bw.jpg);
+  }
+  &__picture--3 {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($silver1, 0.65),
+        rgba($silver2, 0.85)
+      ),
+      url(../img/hero4bw.jpg);
+  }
+
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $white;
+    position: absolute;
+    top: 9.25rem;
+    right: 1rem;
+    text-align: right;
+    width: 65%;
+    margin: 0;
+  }
+
+  &--back {
+    transform: rotateY(180deg);
+
+    &-1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($gold1, 0.35),
+        rgba($gold2, 0.85)
+      );
+    }
+
+    &-2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($royal1, 0.35),
+        rgba($royal2, 0.85)
+      );
+    }
+
+    &-3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($silver1, 0.35),
+        rgba($silver2, 0.85)
+      );
+    }
+  }
+
+  &-1 {
+    background-image: linear-gradient(to right bottom, blue, darkblue);
+  }
+
+  &__heading-span {
+    padding: 0.35rem 0.75rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($gold1, 0.85),
+        rgba($gold2, 0.85)
+      );
+    }
+
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($royal1, 0.85),
+        rgba($royal2, 0.85)
+      );
+    }
+
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($silver1, 0.85),
+        rgba($silver2, 0.85)
+      );
+    }
+  }
+
+  &__details {
+    ul {
+      padding: 1.5rem 0 2rem 0;
+      list-style: none;
+      width: 88%;
+      text-align: center;
+      margin: 0 auto;
+      // font-size: 0.95rem;
+
+      & li {
+        display: inline-block;
+        margin: 0.2rem 0;
+
+        &:not(:last-child) {
+          border-bottom: 1px rgba(grey, 0.55) solid;
+          padding-bottom: 0.2rem;
+        }
+      }
+    }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.25rem;
+    color: $white;
+  }
+
+  &__price-value {
+    color: white;
+    font-size: 2.75rem;
+    font-weight: 300;
+  }
+}
+
+.btn-signUp {
+  width: 40%;
+  margin: 0 auto;
+  color: $grey;
+  background-color: white;
+}
