@@ -1,0 +1,91 @@
+.contact {
+  padding: 9rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($turqouise, 0.45),
+    rgba($turqouise, 0.95)
+  );
+
+  &__block {
+    background-image: linear-gradient(
+        105deg,
+        rgba($white, 0.9) 50%,
+        transparent 50%
+      ),
+      url(../img/hero4.jpg);
+    height: 400px;
+    background-size: cover;
+    background-position: top;
+    height: 35rem;
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 4rem rgba($black, 0.6);
+  }
+
+  &__form-box {
+    width: 50%;
+    padding: 4rem;
+  }
+}
+
+.form {
+  &__title {
+    background-clip: text;
+    color: transparent;
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
+  }
+
+  &__group:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__input {
+    font-size: 1rem;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1px;
+    color: inherit;
+    background-color: rgba($white, 0.5);
+    border: none;
+    font-family: inherit;
+    border-bottom: 3px solid transparent;
+    width: 65%;
+    display: block;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba($black, 0.1);
+      border-bottom: 3px solid $turqouise;
+      transition: all 0.2s ease;
+    }
+
+    &:focus:invalid {
+      border-bottom: 3px orangered solid;
+    }
+  }
+
+  &__label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-left: 1.25rem;
+    margin-top: 0.5rem;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-2rem);
+  }
+}
