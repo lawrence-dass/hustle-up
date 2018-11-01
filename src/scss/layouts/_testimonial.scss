@@ -7,7 +7,6 @@
 
 .story {
   width: 60%;
-
   margin: 0 auto;
   border-radius: 2px;
   box-shadow: 0 3rem 3rem rgba($black, 0.1);
@@ -19,7 +18,6 @@
   &__shape {
     width: 10rem;
     height: 10rem;
-    background-color: green;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     float: left;
@@ -59,6 +57,28 @@
   &:hover &__image {
     transform: scale(1);
     filter: blur(4px) brightness(60%);
+  }
+
+  &-cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  &-btn {
+    display: inline-block;
+    color: $turqouise1;
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+    text-decoration: none;
+    border-bottom: 2px solid $turqouise1;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+
+    &:active,
+    &:hover {
+      background-color: $turqouise1;
+      color: white;
+    }
   }
 }
 

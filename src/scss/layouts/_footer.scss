@@ -1,4 +1,59 @@
 .footer {
   background-color: #333;
-  padding: 5rem 0;
+  padding: 4rem 0;
+
+  &__icon-box {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &__icon {
+    fill: $turqouise; // off-white
+    height: 4rem;
+    left: 1.25rem;
+    top: 1.25rem;
+    width: 4rem;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5rem;
+
+    &-one,
+    &-two {
+      padding-top: 1rem;
+      border-top: 2px solid $grey;
+    }
+  }
+
+  &__list {
+    list-style: none;
+
+    &-item {
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 0rem;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
+    &:link,
+    &:visited {
+      color: $grey;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    &:active,
+    &:hover {
+      color: $turqouise;
+      box-shadow: 0 0.1rem 0.5rem rgba($black, 0.4);
+    }
+  }
 }
