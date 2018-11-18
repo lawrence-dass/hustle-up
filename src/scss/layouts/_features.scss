@@ -4,37 +4,63 @@
       rgba($turqouise, 0.3),
       rgba($turqouise, 0.6)
     ),
-    url(../img/hero4.jpg);
+    url(../img/featuresbg.jpg);
   background-size: cover;
   background-position: top;
   padding: 13.5rem 0;
   transform: skewY(-3.5deg);
   margin-top: -7.5rem;
-}
-.features__block {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5rem;
-  transform: skewY(3.5deg);
-}
 
-.features__box {
-  background-color: rgba($white, 0.825);
-  border-radius: 2px;
-  text-align: center;
-  box-shadow: 0 1rem 4rem rgba($black, 0.15);
-  padding: 1.5rem 0.5rem;
-  transition: 0.3s all ease;
-  width: 90%;
-
-  &:hover {
-    transform: translateY(-1rem) scale(1.03);
-    box-shadow: 0 3rem 4rem rgba($black, 0.15);
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem;
+    transform: skewY(3.5deg);
   }
-}
 
-.features__icon--one {
-  fill: red;
-  width: 4rem;
-  height: 5rem;
+  &__box {
+    background-color: rgba($white, 0.825);
+    border-radius: 2px;
+    text-align: center;
+    box-shadow: 0 1rem 4rem rgba($black, 0.15);
+    padding: 1.5rem 0.5rem;
+    transition: 0.3s all ease;
+    width: 90%;
+
+    &:hover {
+      transform: translateY(-1rem) scale(1.03);
+      box-shadow: 0 3rem 4rem rgba($black, 0.15);
+    }
+
+    & svg {
+      fill: $turqouise2;
+      height: 5rem;
+    }
+  }
+
+  &__icon--one {
+    width: 3.5rem;
+  }
+
+  &__icon--two {
+    width: 4rem;
+  }
+
+  &__icon--three {
+    width: 3rem;
+  }
+
+  &__icon--four {
+    width: 4.75rem;
+  }
+
+  &__heading {
+    padding: 0.3rem 0 0.5rem 0;
+  }
+
+  &__text {
+    font-size: 0.92rem;
+    width: 90%;
+    margin: 0 auto;
+  }
 }

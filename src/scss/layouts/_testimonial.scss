@@ -6,7 +6,8 @@
 }
 
 .story {
-  width: 60%;
+  width: 65%;
+  height: 9rem;
   margin: 0 auto;
   border-radius: 2px;
   box-shadow: 0 3rem 3rem rgba($black, 0.1);
@@ -16,22 +17,25 @@
   background-color: rgba($grey-light1, 0.65);
 
   &__shape {
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     float: left;
     transform: translateX(-1.25rem) skewX(12deg);
     position: relative;
+    display: block;
   }
 
   &__image {
-    height: 100%;
-    transform: scale(1.3);
+    transform: translateY(-2rem);
     transition: all 0.5s ease;
+    width: 100%;
+    display: block;
   }
   &__text {
     transform: skewX(12deg);
+    margin-top: 0.3rem;
   }
 
   &__caption {
@@ -55,7 +59,7 @@
   }
 
   &:hover &__image {
-    transform: scale(1);
+    transform: translateY(-2rem);
     filter: blur(4px) brightness(60%);
   }
 
