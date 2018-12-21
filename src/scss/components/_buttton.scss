@@ -59,4 +59,7 @@
   &-animated {
     animation: 1s moveInBottom 1s ease-out backwards;
   }
+  &-animated-right {
+    animation: 1s moveInRight 1s ease-out backwards;
+  }
 }
