@@ -1,4 +1,6 @@
-.popup {
+.gold,
+.royal,
+.silver {
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -8,7 +10,7 @@
   z-index: 9999;
   backface-visibility: hidden;
   // opacity: 0;
-  // visibility: hidden;
+  display: none;
   transition: all 0.3s ease;
 
   &__content {
@@ -89,16 +91,5 @@
     &:active {
       color: $turqouise;
     }
-  }
-}
-
-@keyframes slideUp {
-  from {
-    top: 1000px;
-    opacity: 0;
-  }
-  to {
-    top: 50%;
-    opacity: 1;
   }
 }
