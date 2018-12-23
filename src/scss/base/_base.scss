@@ -13,6 +13,17 @@
 
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
+
+  @include respond(tablet-land) {
+    font-size: 93.75%;
+  }
+  @include respond(tablet-port) {
+    font-size: 87.5%;
+  }
+  @include respond(phone) {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -21,10 +32,10 @@ body {
   font-weight: 400;
   line-height: 1.7;
   position: relative;
+  box-sizing: border-box;
 }
 
 .container {
   margin: 0 auto;
   width: 80%;
-  // position: relative;
 }

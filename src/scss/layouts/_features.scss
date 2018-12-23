@@ -7,15 +7,38 @@
     url(../img/featuresbg.jpg);
   background-size: cover;
   background-position: top;
-  padding: 13.5rem 0;
+  padding: 7.5rem 0;
   transform: skewY(-3.5deg);
   margin-top: -7.5rem;
+
+  @include respond(phone) {
+    padding: 5rem 0;
+  }
+
+  &__title {
+    color: $grey;
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    transform: skewY(3.5deg);
+    text-align: center;
+    @include respond(tablet-port) {
+      margin-bottom: 12.5rem;
+    }
+  }
 
   &__block {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     transform: skewY(3.5deg);
+
+    @include respond(tablet-port) {
+      margin-top: -8.5rem;
+      display: inline-block;
+    }
   }
 
   &__box {
@@ -25,7 +48,11 @@
     box-shadow: 0 1rem 4rem rgba($black, 0.15);
     padding: 1.5rem 0.5rem;
     transition: 0.3s all ease;
-    width: 90%;
+
+    @include respond(tablet-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
 
     &:hover {
       transform: translateY(-1rem) scale(1.03);
@@ -35,6 +62,12 @@
     & svg {
       fill: $turqouise2;
       height: 5rem;
+    }
+
+    & p {
+      @include respond(tablet-port) {
+        font-size: 1.15rem;
+      }
     }
   }
 

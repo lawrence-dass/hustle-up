@@ -10,6 +10,16 @@
   grid-gap: 1rem;
   perspective: 100rem;
   padding: 0 4rem;
+
+  @include respond(tablet-port) {
+    display: block;
+    padding: 0 4rem;
+  }
+
+  @include respond(phone) {
+    display: block;
+    padding: 0;
+  }
 }
 
 .plans {
@@ -42,6 +52,10 @@
     &:hover .card--back {
       transform: rotateY(0deg);
     }
+
+    @include respond(phone) {
+      margin-bottom: 10rem;
+    }
   }
 
   &__btn {
@@ -65,6 +79,10 @@
   backface-visibility: hidden;
   border-radius: 2px;
   box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+
+  @include respond(phone) {
+    height: 32rem;
+  }
 
   &--front {
     background-color: white;
@@ -190,6 +208,10 @@
         display: inline-block;
         margin: 0.2rem 0;
 
+        @include respond(phone) {
+          font-size: 1.15rem;
+        }
+
         &:not(:last-child) {
           border-bottom: 1px rgba(grey, 0.55) solid;
           padding-bottom: 0.2rem;
@@ -229,4 +251,8 @@
   margin: 0 auto;
   color: $grey;
   background-color: white;
+
+  @include respond(phone) {
+    width: 70%;
+  }
 }

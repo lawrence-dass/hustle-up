@@ -62,3 +62,18 @@
     opacity: 1;
   }
 }
+
+@keyframes slideDown {
+  0% {
+    top: -2000px;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.8;
+  }
+
+  100% {
+    top: 0%;
+    opacity: 1;
+  }
+}
