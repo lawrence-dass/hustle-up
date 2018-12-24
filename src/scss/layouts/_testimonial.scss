@@ -6,15 +6,40 @@
 }
 
 .story {
-  width: 65%;
-  height: 9rem;
+  width: 80%;
+  height: 13rem;
   margin: 0 auto;
   border-radius: 2px;
   box-shadow: 0 3rem 3rem rgba($black, 0.1);
-  padding: 2rem 2rem 2rem 2.5rem;
+  padding: 2rem 3rem 2rem 4rem;
   transform: skewX(-12deg);
   margin-bottom: 3rem;
   background-color: rgba($grey-light1, 0.65);
+
+  &__title {
+    text-align: center;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
+  }
+
+  @include respond(tablet-port) {
+    padding: 1rem 1rem 1rem 2rem;
+    width: 100%;
+    height: 35rem;
+    transform: skewX(0);
+  }
 
   &__shape {
     width: 9rem;
@@ -22,9 +47,15 @@
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     float: left;
-    transform: translateX(-1.25rem) skewX(12deg);
+
     position: relative;
     display: block;
+
+    @include respond(tablet-port) {
+      transform: translateX(-1.25rem) skewX(0);
+      float: none;
+      margin: 0 auto;
+    }
   }
 
   &__image {
@@ -35,7 +66,24 @@
   }
   &__text {
     transform: skewX(12deg);
+    @include respond(tablet-port) {
+      transform: skewX(0);
+    }
     margin-top: 0.3rem;
+  }
+
+  &__heading {
+    @include respond(tablet-port) {
+      margin-bottom: 0.75rem;
+      text-align: center;
+    }
+  }
+
+  & p {
+    @include respond(tablet-port) {
+      font-size: 1.1rem;
+      text-align: center;
+    }
   }
 
   &__caption {

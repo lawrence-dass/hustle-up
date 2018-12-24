@@ -1,5 +1,6 @@
 .footer {
   background-color: #333;
+  color: grey;
   padding: 4rem 0;
 
   &__icon-box {
@@ -20,15 +21,35 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5rem;
 
+    @include respond(phone) {
+      display: block;
+    }
+
     &-one,
     &-two {
       padding-top: 1rem;
       border-top: 2px solid $grey;
     }
+
+    &-one {
+      @include respond(phone) {
+        border-top: none;
+      }
+    }
+
+    &-two {
+      @include respond(phone) {
+        margin-top: 1rem;
+      }
+    }
   }
 
   &__list {
     list-style: none;
+
+    @include respond(phone) {
+      text-align: center;
+    }
 
     &-item {
       display: inline-block;
@@ -43,9 +64,35 @@
     padding: 0 0.5rem;
     &:link,
     &:visited {
-      color: $grey;
+      color: grey;
       text-decoration: none;
       text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    &:active,
+    &:hover {
+      color: $turqouise;
+      box-shadow: 0 0.1rem 0.5rem rgba($black, 0.4);
+    }
+  }
+
+  &__copyright {
+    @include respond(phone) {
+      margin-top: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  &__special-word {
+    font-size: 0.95rem;
+    padding: 0 0.1rem;
+    &:link,
+    &:visited {
+      color: rgb(194, 194, 194);
+      text-decoration: none;
+
       display: inline-block;
       transition: all 0.3s ease;
     }

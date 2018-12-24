@@ -19,11 +19,33 @@
     height: 35rem;
     border-radius: 2px;
     box-shadow: 0 1.5rem 4rem rgba($black, 0.6);
+
+    @include respond(phone) {
+      background-image: linear-gradient(
+          to right,
+          rgba($white, 0.75) 100%,
+          transparent 100%
+        ),
+        url(../img/contact.jpg);
+    }
   }
 
   &__form-box {
     width: 50%;
     padding: 4rem;
+    @include respond(phone) {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(
+        to rigth,
+        rgba($white, 0.9) 100%,
+        transparent 100%
+      ),
+      url(../img/contact.jpg);
   }
 }
 
@@ -61,6 +83,10 @@
     width: 65%;
     display: block;
     transition: all 0.3s ease;
+
+    @include respond(phone) {
+      width: 100%;
+    }
 
     &:focus {
       outline: none;
