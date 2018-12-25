@@ -63,6 +63,10 @@
   position: relative;
 
   & img {
+    width: 50%;
+  }
+
+  @include respond(tablet-land) {
     width: 100%;
   }
 
@@ -104,6 +108,7 @@
 }
 
 .block__blockOne {
+  width: 100%;
   @include respond(tablet-port) {
     display: none;
   }

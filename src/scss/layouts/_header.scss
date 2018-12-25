@@ -12,7 +12,7 @@
   position: relative;
 
   &__icon {
-    fill: rgb(201, 201, 201); // off-white
+    fill: $off-white;
     height: 3rem;
     left: 1.25rem;
     position: absolute;
@@ -20,50 +20,51 @@
     width: 3rem;
 
     @include respond(phone) {
-      width: 3.5rem;
       height: 3.5rem;
+      width: 3.5rem;
     }
   }
 
   &__heroText-box {
-    position: absolute;
-    top: 45%;
     left: 50%;
+    position: absolute;
     transform: translate(-50%, -50%);
     text-align: center;
+    top: 45%;
     width: 90%;
   }
 }
 
 .heading-primary {
   color: $white;
-  text-transform: uppercase;
-  margin-bottom: 1.56rem;
   line-height: 1.25;
+  margin-bottom: 1.56rem;
+  text-transform: uppercase;
 
   &__main {
+    animation: slideDown 1s 0.5s ease-in forwards;
     display: inline-block;
     font-family: 'Alfa Slab One', cursive;
     font-size: 6.25rem;
     font-weight: 400;
     letter-spacing: 0.2rem;
-    animation: slideDown 1s 0.5s ease-in forwards;
-    // backface-visibility: hidden;
     line-height: 1.35;
-
     width: 100%;
 
+    @include respond(large-phone) {
+      font-size: 3.5rem;
+    }
     @include respond(phone) {
       font-size: 3.25rem;
     }
   }
 
   &__sub {
+    animation: fadeIn 1s 0.6s ease-in forwards;
     display: block;
     font-size: 1.25rem;
     font-weight: 400;
     letter-spacing: 1.42rem;
-    animation: fadeIn 1s 0.6s ease-in forwards;
     margin-left: 1rem;
 
     @include respond(phone) {

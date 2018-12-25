@@ -2,7 +2,8 @@
 
 /*
 Breakpoints
-0px - 600px Phone
+0 - 320px - phone
+320px - 600px large-phone
 600px - 900px Tablet portrait
 900px -1200px Tablet landscape
 1200px -1800px Desktop
@@ -19,6 +20,12 @@ Breakpoints option
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
+    @media (max-width: 22.5em) {
+      // 600px
+      @content;
+    }
+  }
+  @if $breakpoint == large-phone {
     @media (max-width: 37.5em) {
       // 600px
       @content;

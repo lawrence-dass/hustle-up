@@ -13,7 +13,13 @@
 
   @include respond(tablet-port) {
     display: block;
-    padding: 0 4rem;
+    padding: 0;
+    perspective: 0;
+  }
+
+  @include respond(large-phone) {
+    display: block;
+    padding: 0;
     perspective: 0;
   }
 
@@ -340,7 +346,7 @@
         // font-size: 0.95rem;
 
         & li {
-          display: inline-block;
+          display: block;
           margin: 0.2rem 0;
 
           @include respond(phone) {
@@ -392,7 +398,11 @@
   color: $grey;
   background-color: white;
 
-  @include respond(phone) {
+  @include respond(tablet-land) {
+    width: 80%;
+  }
+
+  @include respond(large-phone) {
     width: 70%;
   }
 }

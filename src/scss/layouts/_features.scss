@@ -16,14 +16,22 @@
   }
 
   &__title {
-    color: $grey;
+    background-clip: text;
+    color: transparent;
     font-size: 2.35rem;
     font-weight: 700;
     letter-spacing: 1px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     text-transform: uppercase;
-    transform: skewY(3.5deg);
     text-align: center;
+    transform: skewY(3.5deg);
+    -webkit-background-clip: text;
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
+
     @include respond(tablet-port) {
       margin-bottom: 12.5rem;
     }

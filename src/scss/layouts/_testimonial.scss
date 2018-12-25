@@ -34,10 +34,22 @@
     );
   }
 
+  @include respond(tablet-land) {
+    transform: skewX(-12deg);
+    height: 15rem;
+  }
+
   @include respond(tablet-port) {
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 1rem 1rem 1rem;
     width: 100%;
-    height: 35rem;
+    height: 22.5rem;
+    transform: skewX(0);
+  }
+
+  @include respond(large-phone) {
+    padding: 1rem 1rem 1rem 1rem;
+    width: 100%;
+    height: 33rem;
     transform: skewX(0);
   }
 
@@ -50,9 +62,10 @@
 
     position: relative;
     display: block;
+    transform: translateX(-1.25rem) skewX(12deg);
 
     @include respond(tablet-port) {
-      transform: translateX(-1.25rem) skewX(0);
+      transform: translateX(0) skewX(0);
       float: none;
       margin: 0 auto;
     }

@@ -9,7 +9,7 @@
     margin-bottom: 1rem;
   }
   &__icon {
-    fill: $turqouise; // off-white
+    fill: $turqouise;
     height: 4rem;
     left: 1.25rem;
     top: 1.25rem;
@@ -21,7 +21,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5rem;
 
-    @include respond(phone) {
+    @include respond(large-phone) {
       display: block;
     }
 
@@ -32,13 +32,13 @@
     }
 
     &-one {
-      @include respond(phone) {
+      @include respond(large-phone) {
         border-top: none;
       }
     }
 
     &-two {
-      @include respond(phone) {
+      @include respond(large-phone) {
         margin-top: 1rem;
       }
     }
@@ -47,7 +47,7 @@
   &__list {
     list-style: none;
 
-    @include respond(phone) {
+    @include respond(large-phone) {
       text-align: center;
     }
 
@@ -79,7 +79,7 @@
   }
 
   &__copyright {
-    @include respond(phone) {
+    @include respond(large-phone) {
       margin-top: 0.5rem;
       text-align: center;
     }
