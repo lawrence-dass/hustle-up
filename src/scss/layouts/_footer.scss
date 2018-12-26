@@ -4,9 +4,9 @@
   padding: 4rem 0;
 
   &__icon-box {
-    width: 100%;
-    text-align: center;
     margin-bottom: 1rem;
+    text-align: center;
+    width: 100%;
   }
   &__icon {
     fill: $turqouise;
@@ -27,8 +27,8 @@
 
     &-one,
     &-two {
-      padding-top: 1rem;
       border-top: 2px solid $grey;
+      padding-top: 1rem;
     }
 
     &-one {
@@ -65,16 +65,16 @@
     &:link,
     &:visited {
       color: grey;
+      display: inline-block;
       text-decoration: none;
       text-transform: uppercase;
-      display: inline-block;
       transition: all 0.3s ease;
     }
 
     &:active,
     &:hover {
-      color: $turqouise;
       box-shadow: 0 0.1rem 0.5rem rgba($black, 0.4);
+      color: $turqouise;
     }
   }
 
@@ -91,16 +91,15 @@
     &:link,
     &:visited {
       color: rgb(194, 194, 194);
-      text-decoration: none;
-
       display: inline-block;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
     &:active,
     &:hover {
-      color: $turqouise;
       box-shadow: 0 0.1rem 0.5rem rgba($black, 0.4);
+      color: $turqouise;
     }
   }
 }

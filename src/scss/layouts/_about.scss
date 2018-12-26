@@ -7,6 +7,11 @@
 
   &__title {
     background-clip: text;
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
     color: transparent;
     font-size: 2.35rem;
     font-weight: 700;
@@ -14,11 +19,6 @@
     margin-bottom: 4rem;
     text-transform: uppercase;
     -webkit-background-clip: text;
-    background-image: linear-gradient(
-      to right,
-      darken($turqouise, 10%),
-      darken($turqouise, 25%)
-    );
 
     @include respond(tablet-port) {
       font-size: 2rem;

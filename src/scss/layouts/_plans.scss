@@ -31,7 +31,6 @@
 
 .plans {
   &__title {
-    text-align: center;
     background-clip: text;
     color: transparent;
     font-size: 2.35rem;
@@ -39,6 +38,7 @@
     letter-spacing: 1px;
     margin-bottom: 4rem;
     text-transform: uppercase;
+    text-align: center;
     -webkit-background-clip: text;
 
     background-image: linear-gradient(
@@ -81,18 +81,18 @@
 }
 
 .card {
-  color: black;
-  height: 28rem;
-  transition: all 1s;
-  perspective: 150rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   backface-visibility: hidden;
   border-radius: 2px;
   box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
+  color: black;
+  height: 28rem;
+  left: 0;
   padding-bottom: 2rem;
+  perspective: 150rem;
+  position: absolute;
+  transition: all 1s;
+  top: 0;
+  width: 100%;
 
   &--front {
     background-color: white;
@@ -100,8 +100,8 @@
 
   &__picture {
     background-size: cover;
-    height: 14rem;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    height: 14rem;
   }
 
   &__picture--1 {
@@ -131,16 +131,16 @@
   }
 
   &__heading {
+    color: $white;
     font-size: 1.5rem;
     font-weight: 300;
-    text-transform: uppercase;
-    color: $white;
+    margin: 0;
     position: absolute;
-    top: 9.25rem;
     right: 1rem;
+    top: 9.25rem;
+    text-transform: uppercase;
     text-align: right;
     width: 65%;
-    margin: 0;
   }
 
   &--back {
@@ -173,7 +173,6 @@
 
   &__heading-span {
     padding: 0.35rem 0.75rem;
-
     box-decoration-break: clone;
 
     &--1 {
@@ -203,12 +202,12 @@
 
   &__details {
     ul {
-      padding: 1.5rem 0 2rem 0;
       list-style: none;
-      width: 88%;
-      text-align: center;
       margin: 0 auto;
-      // font-size: 0.95rem;
+      padding: 1.5rem 0 2rem 0;
+      text-align: center;
+      width: 88%;
+      color: $grey;
 
       & li {
         display: inline-block;
@@ -227,22 +226,22 @@
   }
 
   &__cta {
-    position: absolute;
-    top: 50%;
     left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
-    text-align: center;
   }
 
   &__price-box {
-    text-align: center;
     margin-bottom: 8rem;
+    text-align: center;
   }
 
   &__price-only {
-    font-size: 1.25rem;
     color: $white;
+    font-size: 1.25rem;
   }
 
   &__price-value {
@@ -253,29 +252,10 @@
 
   // Media Query
   @include respond(tablet-port) {
-    color: black;
     height: auto;
-    transition: all 1s;
-    perspective: 150rem;
     position: relative;
     top: 0;
     left: 0;
-    width: 100%;
-    backface-visibility: hidden;
-    border-radius: 2px;
-
-    &__heading {
-      font-size: 1.5rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      color: $white;
-      position: absolute;
-      top: 9.25rem;
-      right: 1rem;
-      text-align: right;
-      width: 65%;
-      margin: 0;
-    }
 
     &--back {
       clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
@@ -307,50 +287,36 @@
     }
 
     &__heading-span {
-      padding: 0.35rem 0.75rem;
-
       box-decoration-break: clone;
-
-      &--1 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($gold1, 0.85),
-          rgba($gold2, 0.85)
-        );
-      }
-
-      &--2 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($royal1, 0.85),
-          rgba($royal2, 0.85)
-        );
-      }
-
-      &--3 {
-        background-image: linear-gradient(
-          to right bottom,
-          rgba($silver1, 0.85),
-          rgba($silver2, 0.85)
-        );
-      }
+      padding: 0.35rem 0.75rem;
     }
 
     &__details {
       ul {
-        padding: 1.5rem 0 2rem 0;
         list-style: none;
-        width: 88%;
-        text-align: center;
         margin: 0 auto;
+        padding: 1.5rem 0 2rem 0;
+        text-align: center;
+        width: 88%;
         // font-size: 0.95rem;
 
         & li {
           display: block;
           margin: 0.2rem 0;
 
+          @include respond(tablet-port) {
+            width: 55%;
+            margin: 0 auto;
+          }
+
+          @include respond(large-phone) {
+            font-size: 1.15rem;
+            width: 70%;
+          }
+
           @include respond(phone) {
             font-size: 1.15rem;
+            width: 88%;
           }
 
           &:not(:last-child) {
@@ -367,7 +333,6 @@
       left: 0%;
       transform: translate(0);
       width: 100%;
-      text-align: center;
       padding: 4rem 2rem 2rem 2rem;
       margin-top: -3rem;
       @include respond(phone) {
@@ -378,25 +343,14 @@
     &__price-box {
       margin-bottom: 1rem;
     }
-
-    &__price-only {
-      font-size: 1.25rem;
-      color: $white;
-    }
-
-    &__price-value {
-      color: white;
-      font-size: 2.75rem;
-      font-weight: 300;
-    }
   }
 }
 
 .btn-signUp {
-  width: 40%;
-  margin: 0 auto;
-  color: $grey;
   background-color: white;
+  color: $grey;
+  margin: 0 auto;
+  width: 70%;
 
   @include respond(tablet-land) {
     width: 80%;

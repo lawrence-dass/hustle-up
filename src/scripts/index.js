@@ -46,3 +46,11 @@ signUpSilver.addEventListener('click', () => {
   silverPopup.style.display = 'block';
   silverPopup.style.opacity = '1';
 });
+
+// navigation close
+
+document.querySelectorAll('.navigation__link').forEach(element => {
+  element.addEventListener('click', () => {
+    document.getElementById('navigation__toggle').checked = false;
+  });
+});

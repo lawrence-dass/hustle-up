@@ -7,9 +7,9 @@
     url(../img/featuresbg.jpg);
   background-size: cover;
   background-position: top;
+  margin-top: -7.5rem;
   padding: 7.5rem 0;
   transform: skewY(-3.5deg);
-  margin-top: -7.5rem;
 
   @include respond(phone) {
     padding: 5rem 0;
@@ -17,6 +17,11 @@
 
   &__title {
     background-clip: text;
+    background-image: linear-gradient(
+      to right,
+      darken($turqouise, 10%),
+      darken($turqouise, 25%)
+    );
     color: transparent;
     font-size: 2.35rem;
     font-weight: 700;
@@ -26,11 +31,6 @@
     text-align: center;
     transform: skewY(3.5deg);
     -webkit-background-clip: text;
-    background-image: linear-gradient(
-      to right,
-      darken($turqouise, 10%),
-      darken($turqouise, 25%)
-    );
 
     @include respond(tablet-port) {
       margin-bottom: 12.5rem;
@@ -44,27 +44,27 @@
     transform: skewY(3.5deg);
 
     @include respond(tablet-port) {
-      margin-top: -8.5rem;
       display: inline-block;
+      margin-top: -8.5rem;
     }
   }
 
   &__box {
     background-color: rgba($white, 0.825);
     border-radius: 2px;
-    text-align: center;
     box-shadow: 0 1rem 4rem rgba($black, 0.15);
     padding: 1.5rem 0.5rem;
+    text-align: center;
     transition: 0.3s all ease;
 
     @include respond(tablet-port) {
-      width: 100%;
       margin-bottom: 2rem;
+      width: 100%;
     }
 
     &:hover {
-      transform: translateY(-1rem) scale(1.03);
       box-shadow: 0 3rem 4rem rgba($black, 0.15);
+      transform: translateY(-1rem) scale(1.03);
     }
 
     & svg {
@@ -101,8 +101,8 @@
 
   &__text {
     font-size: 0.92rem;
-    width: 90%;
     margin: 0 auto;
+    width: 90%;
   }
 }
 
