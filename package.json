@@ -4,16 +4,19 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --out-dir prod --public-url ./"
+    "build": "parcel build src/index.html --out-dir prod --public-url ./",
+    "deploy": "gh-pages -d prod"
   },
   "author": "lawrence4code",
   "license": "MIT",
+  "homepage": "https://lawrence4code.github.io/hustle-up",
   "dependencies": {
     "autoprefixer": "^9.3.1",
     "parcel-bundler": "^1.10.3"
   },
   "devDependencies": {
     "cssnano": "^4.1.8",
+    "gh-pages": "^2.0.1",
     "sass": "^1.14.3"
   }
 }
