@@ -1,6 +1,6 @@
 .footer {
   background-color: #333;
-  color: grey;
+  color: $grey1;
   padding: 4rem 0;
 
   &__icon-box {
@@ -64,7 +64,7 @@
     padding: 0 0.5rem;
     &:link,
     &:visited {
-      color: grey;
+      color: $grey1;
       display: inline-block;
       text-decoration: none;
       text-transform: uppercase;
@@ -90,7 +90,7 @@
     padding: 0 0.1rem;
     &:link,
     &:visited {
-      color: rgb(194, 194, 194);
+      color: $off-white;
       display: inline-block;
       text-decoration: none;
       transition: all 0.3s ease;

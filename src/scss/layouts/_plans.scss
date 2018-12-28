@@ -83,8 +83,8 @@
 .card {
   backface-visibility: hidden;
   border-radius: 2px;
-  box-shadow: 0 1.5rem 4rem rgba(#000, 0.15);
-  color: black;
+  box-shadow: 0 1.5rem 4rem rgba($black, 0.15);
+  color: $black;
   height: 28rem;
   left: 0;
   padding-bottom: 2rem;
@@ -95,7 +95,7 @@
   width: 100%;
 
   &--front {
-    background-color: white;
+    background-color: $white;
   }
 
   &__picture {
@@ -218,7 +218,7 @@
         }
 
         &:not(:last-child) {
-          border-bottom: 1px rgba(grey, 0.55) solid;
+          border-bottom: 1px rgba($grey1, 0.55) solid;
           padding-bottom: 0.2rem;
         }
       }
@@ -245,7 +245,7 @@
   }
 
   &__price-value {
-    color: white;
+    color: $white;
     font-size: 2.75rem;
     font-weight: 300;
   }
@@ -298,7 +298,6 @@
         padding: 1.5rem 0 2rem 0;
         text-align: center;
         width: 88%;
-        // font-size: 0.95rem;
 
         & li {
           display: block;
@@ -320,7 +319,7 @@
           }
 
           &:not(:last-child) {
-            border-bottom: 1px rgba(grey, 0.55) solid;
+            border-bottom: 1px rgba($grey1, 0.55) solid;
             padding-bottom: 0.2rem;
           }
         }
@@ -347,7 +346,7 @@
 }
 
 .btn-signUp {
-  background-color: white;
+  background-color: $white;
   color: $grey;
   margin: 0 auto;
   width: 70%;
