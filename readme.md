@@ -22,7 +22,7 @@ Click [here](https://priceless-yalow-cc2ab3.netlify.com/) for live site.
 
 * [Unsplash](https://unsplash.com/) - Free Images
 * [Icomoon](https://icomoon.io/) - Icons
-* [Google Fonts](https://fonts.google.com/) - Used to generate RSS Feeds
+* [Google Fonts](https://fonts.google.com/) - Fonts
 
 
 ## License
