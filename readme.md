@@ -4,7 +4,7 @@ Demo website for portfolio purpose, fully responsive with  Mobile-First Approach
 
 The site score 100% on all the aspect in Lighthouse i.e. Performance, Accessibility , Best Practices and SEO and loads up in aprox 4 seconds.
 
-Click [here]((https://priceless-yalow-cc2ab3.netlify.com/)) for live site.
+Click [here](https://priceless-yalow-cc2ab3.netlify.com/) for live site.
 
 ## Technologies and Library used in the project.
 
@@ -20,9 +20,9 @@ Click [here]((https://priceless-yalow-cc2ab3.netlify.com/)) for live site.
 
 ## Due credit to
 
-* [Unsplash]((https://unsplash.com/)) - Free Images
-* [Icomoon]((https://icomoon.io/)) - Icons
-* [Google Fonts]((https://fonts.google.com/)) - Used to generate RSS Feeds
+* [Unsplash](https://unsplash.com/) - Free Images
+* [Icomoon](https://icomoon.io/) - Icons
+* [Google Fonts](https://fonts.google.com/) - Used to generate RSS Feeds
 
 
 ## License
