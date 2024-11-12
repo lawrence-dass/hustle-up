@@ -11,12 +11,12 @@
   "license": "MIT",
   "homepage": "https://lawrence4code.github.io/hustle-up",
   "dependencies": {
-    "autoprefixer": "^9.3.1",
-    "parcel-bundler": "^1.10.3"
+    "autoprefixer": "^10.4.20",
+    "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
-    "cssnano": "^4.1.8",
-    "gh-pages": "^2.0.1",
-    "sass": "^1.14.3"
+    "cssnano": "^7.0.6",
+    "gh-pages": "^6.2.0",
+    "sass": "^1.80.6"
   }
 }
